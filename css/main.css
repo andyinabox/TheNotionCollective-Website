@@ -1,0 +1,116 @@
+/*
+ ORANGE: #F26631
+ LIGHT ORANGE: #F79A21
+ BLUE: #1A96D4
+
+*/
+
+body {
+	background: #F26631;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica", Arial, "MS Trebuchet", sans-serif;
+}
+
+p, ul{
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.columns {
+	margin-top: 50px;
+}
+.columns .column {
+	float: left;
+	width: 250px;
+	margin-bottom: 2em;
+}
+.columns .column h3 {
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 100%;
+}
+.columns .column ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#Co
+ntainer {
+}
+#Header {
+	background: #F26631 url(../images/template/header.png) top right no-repeat;
+}
+#Header h1 {
+	margin-left: 80px;
+	margin-top: 100px;
+	width: 527px;
+	height: 205px;
+}
+#Header h1 a {
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	width: 527px;
+	height: 205px;
+	background: transparent url(../images/template/logo.png) top left no-repeat;
+}
+#Navigation {
+	position: fixed;
+	top: 150px;
+	right: 180px;
+	z-index: 1;
+}
+
+#Navigation #nav-logo {
+	display: none;
+}
+
+#Navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#Main {
+}
+
+#Main .section {
+	padding-top: 50px;
+	padding-bottom: 50%;
+}
+
+#Main #home {
+	background: #F26631 url(../images/template/section1.png) top right repeat-y;
+	color: #333;
+}
+
+#Main #who-we-are {
+	background: #fff url(../images/template/section2.png) top right repeat-y;
+	color: #333;
+}
+#Main #what-we-do {
+	background: #1A96D4 url(../images/template/section3.png) top right repeat-y;
+	color: #fff;
+}
+#Main #contact-us {
+	background: #F79A21 url(../images/template/section4.png) top right repeat-y;
+	color: #333;
+	padding-bottom: 50px;
+}
+
+#Main .section .content {
+	padding-left: 100px;
+	width: 500px;
+	margin: 0;
+}
+
+#Main .section .content h2 {
+	margin-top: 0;
+	padding-top:; 0;
+}
+
+#Footer {
+	background: #F26631 url(../images/template/footer.png) top left no-repeat;
+	height: 200px;
+}

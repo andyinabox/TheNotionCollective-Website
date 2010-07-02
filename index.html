@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="expires" content="-1" />
+		<meta name="robots" content="all" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="author" content="Jason Bahling, Andy Dayton, Michael Eckblad, Jonathan Wohl, Candice Heberer" />
+		<meta name="copyright" content="The Notion Collective" />
+		<meta name="company" content="The Notion Collective" />
+		<meta name="description" content="The Notion Collective. Great minds think together." />
+		<meta name="keywords" content="art, design, collective, notion" />
+		
+		<title>The Notion Collective</title>
+
+		<script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-ui-1.8.2.custom.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				$('#work_button').click(function(e) {
+					e.preventDefault();
+					$('#Work').toggle("blind", {}, 1000);
+					// $('#Work ul li').each(function() {
+					// 	$(this).toggle("drop", {}, 1000);
+					// });
+				});
+			});
+		</script>
+		
+		<style type="text/css" media="screen">
+			body {
+				margin: 0;
+				padding: 0;
+				text-align: center;
+				font-family: Helvetica, Arial, sans-serif;
+				font-size: small;
+				
+			}
+			h1 {}
+			
+			a, a:link, a:visited {
+				text-decoration: none;
+				color: #000;
+				padding: .2em;
+			}
+			a:hover {
+				background: #000;
+				color: #fff;
+			}
+			
+			ul {
+				list-style: none;
+				padding-left: 1em;
+			}
+			ul li {
+				margin: 1em;
+			}
+
+			#Container {
+				width: 800px;
+				margin: 0px auto;	
+				text-align: left;			
+			}
+
+			#Header {
+				margin-top: 20%;
+			}
+			
+			#Nav {
+				margin-left: .5em;
+				text-align: left;
+			}
+			
+			#Work {
+				margin-top: 3em;
+			}
+			
+			body.js #Work { display: none; }
+
+		</style>
+		
+</head>
+
+<body>
+	
+	<!-- activate js styles for auto-hiding -->
+	<script type="text/javascript" charset="utf-8">$('body').addClass('js');</script>
+
+	<div id="Container">
+		<div id="Header">
+			<h1><a href="/" title="Click for infinite loop.">The Notion Collective</a></h1>
+		</div>
+		<div id="Nav">
+			<a href="http://notioncollective.tumblr.com">collective notions</a> | <a href="mailto:info@notioncollective.com" title="Intrigued? Send us a message.">email</a> |
+			<a href="#" id="work_button">work &darr;</a>
+		</div>
+		<div id="Work">
+			<ul id="work_list">
+				<li><strong>Kal Rieman</strong> | <a href="http://kalrieman.com">http://kalrieman.com</a></li>
+			</ul>
+	</div>
+
+</body>
+</html>

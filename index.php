@@ -57,6 +57,7 @@
 				});
 				$('#Work a').click(takeMeThere);
 				$('#Nav #collective_notions').click(takeMeThere);
+				$('a#close').click(function(e) { e.preventDefault; window.location.href = $('iframe#Portal').attr('src'); });
 			});
 			
 			function takeMeThere(e) {
@@ -143,6 +144,7 @@
 				font-size: 80%;
 			}
 			
+			
 			#Work {
 				position: absolute;
 				top: 2.9em;
@@ -179,8 +181,10 @@
 			<div id="Nav">
 				<a title="get to know us" id="collective_notions" href="http://notioncollective.tumblr.com">collective notions</a> |
 				<a title="send us a message" href="mailto:info@notioncollective.com">email</a> |
-				<a title="see what we've been up to" href="#" id="work_button">work &darr;</a>
+				<a title="see what we've been up to" href="#" id="work_button">work &darr;</a> |
+				<a title="close this bar" id="close" href="#">x</a>
 			</div>
+			
 			<div id="Work">
 				<ul id="work_list">
 					<li id="kalrieman"> &larr; <strong>Kal Rieman</strong> | <a target="Portal" title="see Kal Rieman's website" href="http://kalrieman.com">http://kalrieman.com</a></li>

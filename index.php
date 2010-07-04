@@ -1,3 +1,4 @@
+
 <?php
 
 	// WHEREVER YOU GO, THERE YOU ARE
@@ -5,6 +6,33 @@
 	array_pop($html_base);
 	$html_base = implode($html_base, '/').'/';
 ?>
+<!-- //////////////////////
+
+
+      T
+      H
+      E
+
+      N
+      O
+      T
+      I
+      O
+  THE NOTION COLLECTIVE
+  
+      C
+      O
+      L
+      L
+      E
+      C
+      T
+      I
+      V
+      E
+
+
+/////////////////////// -->
 
 <!DOCTYPE html>
 
@@ -32,12 +60,22 @@
 			});
 			
 			function takeMeThere(e) {
-				console.log($(this).parents('#Nav'));
+				// keep from clicking
 				e.preventDefault();
 				
-				if($(this).parents('#Work').length != 0) { $('#Work').toggle(); }
+				// where are we going?
 				var src = $(this).attr('href');
-				$('iframe#Portal').attr('src', src);
+				
+				// close the work navigation if it was a work link
+				if($(this).parents('#Work').length != 0) {
+					$('#Work').toggle();
+				}
+				
+				// simply refresh if the path is here
+				if(src == '.') { window.location.href = window.location.href; }
+				
+				// otherwise, load link into frame
+				else { $('iframe#Portal').attr('src', src); }
 			}
 		</script>
 		
@@ -146,7 +184,7 @@
 			<div id="Work">
 				<ul id="work_list">
 					<li id="kalrieman"> &larr; <strong>Kal Rieman</strong> | <a target="Portal" title="see Kal Rieman's website" href="http://kalrieman.com">http://kalrieman.com</a></li>
-					<li id="home"> &larr; <strong>The Notion Collective</strong> | <a target="Portal" title="our website" href="http://notioncollective.com">http://notioncollective.com</a></li>
+					<li id="home"> &larr; <strong>The Notion Collective</strong> | <a target="Portal" title="our website" href=".">http://notioncollective.com</a></li>
 				</ul>
 			</div>
 		</div>

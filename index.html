@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<meta http-equiv="pragma" content="no-cache" />
-		<meta http-equiv="expires" content="-1" />
-		<meta name="robots" content="all" />
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="author" content="Jason Bahling, Andy Dayton, Michael Eckblad, Jonathan Wohl, Candice Heberer" />
 		<meta name="copyright" content="The Notion Collective" />
 		<meta name="company" content="The Notion Collective" />
 		<meta name="description" content="The Notion Collective. Great minds think together." />
-		<meta name="keywords" content="art, design, collective, notion" />
+		<meta name="keywords" content="art, design, consulting, creative, web development, brooklyn, nyc, collective, notion" />
 		
 		<title>The Notion Collective</title>
 
@@ -23,9 +18,6 @@
 				$('#work_button').click(function(e) {
 					e.preventDefault();
 					$('#Work').toggle("blind", {}, 1000);
-					// $('#Work ul li').each(function() {
-					// 	$(this).toggle("drop", {}, 1000);
-					// });
 				});
 			});
 		</script>
@@ -53,10 +45,11 @@
 			
 			ul {
 				list-style: none;
-				padding-left: 1em;
+				padding-left: 0;
 			}
 			ul li {
 				margin: 1em;
+				margin-left: 7px;
 			}
 
 			#Container {
@@ -72,6 +65,8 @@
 			#Nav {
 				margin-left: .5em;
 				text-align: left;
+				text-transform: uppercase;
+				font-size: 80%;
 			}
 			
 			#Work {
@@ -91,17 +86,18 @@
 
 	<div id="Container">
 		<div id="Header">
-			<h1><a href="/" title="Click for infinite loop.">The Notion Collective</a></h1>
+			<h1><a href="/" title="that's us!">The Notion Collective</a></h1>
 		</div>
 		<div id="Nav">
-			<a href="http://notioncollective.tumblr.com">collective notions</a> | <a href="mailto:info@notioncollective.com" title="Intrigued? Send us a message.">email</a> |
-			<a href="#" id="work_button">work &darr;</a>
+			<a title="get to know us" href="http://notioncollective.tumblr.com">collective notions</a> |
+			<a title="send us a message" href="mailto:info@notioncollective.com">email</a> |
+			<a title="see what we've been up to" href="#" id="work_button">work &darr;</a>
 		</div>
 		<div id="Work">
 			<ul id="work_list">
-				<li><strong>Kal Rieman</strong> | <a href="http://kalrieman.com">http://kalrieman.com</a></li>
+				<li><strong>Kal Rieman</strong> | <a target="_blank" title="see Kal Rieman's website" href="http://kalrieman.com">http://kalrieman.com</a> &rarr;</li>
 			</ul>
+		</div>
 	</div>
-
 </body>
 </html>

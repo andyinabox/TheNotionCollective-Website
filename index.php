@@ -48,9 +48,25 @@
 
 		<script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery-ui-1.8.2.custom.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.simplemodal-1.3.5.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script type="text/javascript" charset="utf-8">
+		
 			$(function(){
+				
+				// open welcome window after short delay
+				// setTimeout(function() {
+				// 	$('#Welcome').modal({containerCss:{
+				// 			backgroundColor:"#fff",
+				// 			borderColor:"#ccc",
+				// 			boderWidth: 2,
+				// 			height:450,
+				// 			padding:0,
+				// 			width:500,
+				// 			zIndex: 1000
+				// 	}});					
+				// }, 2000);
+
 				$('#work_button').click(function(e) {
 					e.preventDefault();
 					$('#Work').toggle();
@@ -59,6 +75,10 @@
 				$('#Nav #collective_notions').click(takeMeThere);
 				$('a#close').click(function(e) { e.preventDefault; window.location.href = $('iframe#Portal').attr('src'); });
 			});
+			
+			$(window).resize(function() {
+				$('iframe#Portal').height($(window).height()-$('#Header').height());
+			})
 			
 			function takeMeThere(e) {
 				// keep from clicking
@@ -122,7 +142,7 @@
 				top: 0;
 				left: 0;
 				width: 100%;
-/*				background: #fff;*/
+				background: #fff;
 				height:2.9em;
 				border-bottom: 1px solid #ccc;
 			}
@@ -132,18 +152,30 @@
 				margin: 0;
 				top: 0;
 				line-height: 1.5em;
+				padding: 0 .5em;
 			}
 			
 			#Nav {
 				position: absolute;
-				top: 2em;
+				top: 1.5em;
 				right: 0px;
 				margin-right: 1em;
 				text-align: left;
 				text-transform: uppercase;
 				font-size: 80%;
+				color: #ccc;
 			}
 			
+			#Welcome {
+				position: absolute;
+				margin: auto;
+				top: 70px;
+				background: #fff;
+				border: 2px solid #ddd;
+				width: 300px;
+				left: 50%;
+				margin-left: -150px;
+			}
 			
 			#Work {
 				position: absolute;
@@ -191,8 +223,14 @@
 					<li id="home"> &larr; <strong>The Notion Collective</strong> | <a target="Portal" title="our website" href=".">http://notioncollective.com</a></li>
 				</ul>
 			</div>
+			
+			<div id="Welcome">
+				<h2>Welcome Message</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
 		</div>
 
+		<!-- <iframe id="Portal" src="http://www.google.com/search?hl=en&q=the+notion+collective" seamless></iframe> -->
 		<iframe id="Portal" src="http://www.google.com/search?hl=en&q=the+notion+collective" seamless></iframe>
 	</div>
 	

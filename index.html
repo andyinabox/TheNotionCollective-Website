@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="author" content="Jason Bahling, Andy Dayton, Michael Eckblad, Jonathan Wohl, Candice Heberer" />
+		<meta name="copyright" content="The Notion Collective" />
+		<meta name="company" content="The Notion Collective" />
+		<meta name="description" content="The Notion Collective. Great minds think together." />
+		<meta name="keywords" content="art, design, consulting, creative, web development, brooklyn, nyc, collective, notion" />
+		
+		<title>The Notion Collective</title>
+
+		<script src="js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-ui-1.8.2.custom.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				$('#work_button').click(function(e) {
+					e.preventDefault();
+					$('#Work').toggle("blind", {}, 1000);
+				});
+			});
+		</script>
+		
+		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
+		
+</head>
+
+<body>
+	
+	<!-- activate js styles for auto-hiding -->
+	<script type="text/javascript" charset="utf-8">$('body').addClass('js');</script>
+
+	<div id="Container">
+		<div id="Header">
+			<h1><a href="/" title="that's us!">The Notion Collective</a></h1>
+		</div>
+		<div id="Nav">
+			<a title="get to know us" href="http://notioncollective.tumblr.com">collective notions</a> |
+			<a title="send us a message" href="mailto:info@notioncollective.com">email</a> |
+			<a title="see what we've been up to" href="#" id="work_button">work &darr;</a>
+		</div>
+		<div id="Work">
+			<ul id="work_list">
+				<li><strong>The Imago Dei Initiative</strong> | <a target="_blank" title="check out our web and branding work for The Imago Dei Initiative" href="http://imagodeiinitiative.org">http://imagodeiinitiative.org</a> &rarr;</li>
+				<li><strong>Kal Rieman</strong> | <a target="_blank" title="see Kal Rieman's website" href="http://kalrieman.com">http://kalrieman.com</a> &rarr;</li>
+			</ul>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -2,11 +2,11 @@
 
 <head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="author" content="Jason Bahling, Andy Dayton, Michael Eckblad, Jonathan Wohl, Candice Heberer" />
+		<meta name="author" content="Jason Bahling, Andy Dayton, Michael Eckblad, Candice Heberer, Jonathan Wohl" />
 		<meta name="copyright" content="The Notion Collective" />
 		<meta name="company" content="The Notion Collective" />
 		<meta name="description" content="The Notion Collective. Great minds think together." />
-		<meta name="keywords" content="art, design, consulting, creative, web development, brooklyn, nyc, collective, notion" />
+		<meta name="keywords" content="art, design, consulting, creative, web development, brooklyn, nyc, collective, notion, Jason Bahling, Andy Dayton, Michael Eckblad, Candice Heberer, Jon Wohl" />
 		
 		<title>The Notion Collective</title>
 
@@ -17,7 +17,23 @@
 			$(function(){
 				$('#work_button').click(function(e) {
 					e.preventDefault();
-					$('#Work').toggle("blind", {}, 1000);
+					if($('#People:visible').length > 0) {
+						$('#People').hide("blind", function() {
+							$('#Work').toggle("blind", {}, 1000);
+						}, 200);
+					} else {
+						$('#Work').toggle("blind", {}, 1000);
+					}
+				});
+				$('#people_button').click(function(e) {
+					e.preventDefault();
+						if($('#Work:visible').length > 0) {
+							$('#Work').hide("blind", function() {
+								$('#People').toggle("blind", {}, 1000);
+							}, 200);
+						} else {
+							$('#People').toggle("blind", {}, 1000);
+						}
 				});
 			});
 		</script>
@@ -35,15 +51,28 @@
 		<div id="Header">
 			<h1><a href="/" title="that's us!">The Notion Collective</a></h1>
 		</div>
+		
 		<div id="Nav">
-			<a title="get to know us" href="http://notioncollective.tumblr.com">collective notions</a> |
-			<a title="send us a message" href="mailto:info@notioncollective.com">email</a> |
-			<a title="see what we've been up to" href="#" id="work_button">work &darr;</a>
+			<a title="see what we've been up to" href="#Work" id="work_button">work &darr;</a>&nbsp;|&nbsp;
+			<a title="see what we've been up to" href="#People" id="people_button">people &darr;</a>&nbsp;|&nbsp;
+			<a target="_blank" title="see what we're up to" href="http://blog.notioncollective.com">blog</a>&nbsp;|&nbsp;<a title="send us a message" href="mailto:info@notioncollective.com">email</a>&nbsp;|&nbsp;<a id="twitter" target="_blank" title="us on twitter" href="http://twitter.com/notion_nyc"><span>@notion_nyc</span></a>
+			
 		</div>
 		<div id="Work">
 			<ul id="work_list">
-				<li><strong>The Imago Dei Initiative</strong> | <a target="_blank" title="check out our web and branding work for The Imago Dei Initiative" href="http://imagodeiinitiative.org">http://imagodeiinitiative.org</a> &rarr;</li>
-				<li><strong>Kal Rieman</strong> | <a target="_blank" title="see Kal Rieman's website" href="http://kalrieman.com">http://kalrieman.com</a> &rarr;</li>
+				<li><strong>Beyond the Debt Ceiling</strong> | <a target="_blank" title="a weekend project about the Debt Ceiling" href="http://beyondthedebtceiling.us">beyondthedebtceiling.us</a> &rarr;</li>
+				<li><strong>Station Identification</strong> | <a target="_blank" title="see Kal Rieman's website" href="http://stationidentification.notioncollective.com">stationidentification.notioncollective.com</a> &rarr;</li>
+				<li><strong>The Imago Dei Initiative</strong> | <a target="_blank" title="check out our web and branding work for The Imago Dei Initiative" href="http://imagodeiinitiative.org">imagodeiinitiative.org</a> &rarr;</li>
+				<li><strong>Kal Rieman</strong> | <a target="_blank" title="see Kal Rieman's website" href="http://kalrieman.com">kalrieman.com</a> &rarr;</li>
+			</ul>
+		</div>
+		<div id="People">
+			<ul id="people_list">
+				<li><strong>Jason</strong> | <a target="_blank" title="Jason Bahling's website" href="http://www.jasonbahling.com">jasonbahling.com</a> &rarr;</li>
+				<li><strong>Andy</strong> | <a target="_blank" title="Andy Dayton's website" href="http://andydayton.com">andydayton.com</a> &rarr;</li>
+				<li><strong>Michael</strong> | <a target="_blank" title="Michael Eckblad's website" href="http://michaeleckblad.com">michaeleckblad.com</a> &rarr;</li>
+				<li><strong>Candice</strong> | <a target="_blank" title="Candice Heberer's website" href="http://candiceheberer.com">candiceheberer.com</a> &rarr;</li>
+				<li><strong>Jon</strong> | <a target="_blank" title="Jon Wohl's website" href="http://jonwohl.com">jonwohl.com</a> &rarr;</li>
 			</ul>
 		</div>
 	</div>
